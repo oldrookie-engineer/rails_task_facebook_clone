@@ -24,8 +24,9 @@
   padding-left: 20px;
   background-color: #e5e8f1;
   width: 100%;
-  height: 650px;
+  height: 100%;
   padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 .image-page p {
@@ -47,8 +48,9 @@
   padding-left: 20px;
   background-color: #e5e8f1;
   width:100%;
-  height: 800px;
+  height: 100%;
   padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 .edit-page a {
@@ -65,8 +67,9 @@
   padding-left: 20px;
   background-color: #e5e8f1;
   width:100%;
-  height: 650px;
+  height: 100%;
   padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 .confirm-page img {
@@ -86,13 +89,12 @@
 table tr,td {
   border: 1px solid gray;
   text-align: center;
-  padding: 20px 0;
+  height: 40px;
 }
 
 th {
   border: 1px solid gray;
   text-align: center;
-  vertical-align: middle;
 }
 
 .picture-table {
@@ -100,8 +102,11 @@ th {
   padding-left: 20px;
   background-color: #e5e8f1;
   width:100%;
-  height: 700px;
+  height: 100%;
   padding-top: 10px;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  padding-right: 20px;
 }
 
 .picture-table a {

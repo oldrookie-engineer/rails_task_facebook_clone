@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => 'users#new'
   resources :pictures do
     collection do
       post :confirm
