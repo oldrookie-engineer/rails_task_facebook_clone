@@ -21,7 +21,7 @@
       </div>
       <div class="site-entrance">
       <% if logged_in? %>
-        <%= link_to "プロフィール", user_path(current_user.id) %>
+        <%= link_to "プロフィール", session_path(current_user.id) %>
         <%= link_to "ログアウト", session_path(current_user.id), method: :delete %>
       <% else %>
         <a><%= link_to "新規登録", new_user_path %></a>

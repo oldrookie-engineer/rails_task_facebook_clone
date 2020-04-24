@@ -14,6 +14,10 @@ class SessionsController < ApplicationController
     end
   end
 
+  def show
+    @user = User.find(params[:id])
+  end
+
   def destroy
     session.delete(:user_id)
     flash[:notice] = 'ログアウトしました'

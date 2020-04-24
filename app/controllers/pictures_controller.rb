@@ -50,6 +50,7 @@ class PicturesController < ApplicationController
   end
 
   def destroy
+    @picture.user_id = current_user.id
     @picture.destroy
     respond_to do |format|
       format.html { redirect_to pictures_url, notice: '投稿削除できました！' }
