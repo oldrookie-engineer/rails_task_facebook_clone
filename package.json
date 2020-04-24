@@ -1,0 +1,8 @@
+{
+  "name": "facebook_clone",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "3",
+    "jquery": "^3.5.0"
+  }
+}

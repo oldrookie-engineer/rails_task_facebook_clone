@@ -1,0 +1,7 @@
+<p id="notice"><%= notice %></p>
+<div class="edit-page">
+  <h1>投稿編集</h1>
+  <%= render 'form', picture: @picture %>
+  <a><%= link_to '詳細', @picture %></a>
+  <a><%= link_to '投稿一覧に戻る', pictures_path %></a>
+</div>

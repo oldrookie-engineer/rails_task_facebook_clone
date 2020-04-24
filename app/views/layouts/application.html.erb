@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FacebookClone</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="site">
+      <div class="site-header">
+        <h1>facebook-clone</h1>
+        <div class="login-alert">
+          <% flash.each do |key, value| %>
+            <%= content_tag(:div, value, class: "#{key}") %>
+          <% end %>
+      </div>
+      </div>
+      <div class="site-entrance">
+      <% if logged_in? %>
+        <%= link_to "プロフィール", user_path(current_user.id) %>
+        <%= link_to "ログアウト", session_path(current_user.id), method: :delete %>
+      <% else %>
+        <a><%= link_to "新規登録", new_user_path %></a>
+        <a><%= link_to "ログイン", new_session_path %></a>
+      <% end %>
+      </div>
+    </div>
+    <%= yield %>
+    <footer>Facebook-clone ©️ 2020</footer>
+</body>
+</html>

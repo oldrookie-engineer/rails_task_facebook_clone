@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+  <div class="image-page">
+  <p>
+    <strong>画像:</strong><br>
+    <%= image_tag @picture.image.url %><br>
+    <strong>内容:</strong>
+    <%= @picture.content %>
+  </p><br>
+  <a><%= link_to '編集', edit_picture_path(@picture) if @picture.user_id == current_user.id %></a>
+  <a><%= link_to '投稿一覧に戻る', pictures_path %></a>
+  </div>

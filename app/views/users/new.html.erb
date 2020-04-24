@@ -1,0 +1,32 @@
+
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@user.errors.count, "件のエラーです！") %><%= @user.name %> 以下の理由で登録できません！</h2>
+    <ul>
+    <% @user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="container">
+<div class="acount-text">
+  <h3>Facebook-cloneを使うと、友達、同級生、仲間たちとつながりを深められます。スマホからもアクセスできます。</h3>
+</div>
+<div class="acount">
+    <h1>アカウント登録</h1>
+    <h3>簡単に登録できます</h3>
+    <%= form_with(model: @user, local: true) do |f| %><br><br>
+      <%= f.label :名前 %>
+      <%= f.text_field :name %>
+      <%= f.label :メールアドレス %>
+      <%= f.email_field :email %>
+      <%= f.label :パスワード %>
+      <%= f.password_field :password %>
+      <%= f.label :パスワード再入力 %>
+      <%= f.password_field :password_confirmation %><br>
+      <%= f.submit "アカウント登録" %>
+    <% end %>
+</div>
+</div>
